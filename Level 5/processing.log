@@ -1,0 +1,8 @@
+2025-03-19 23:21:32,682 - INFO - Started processing C:/Users/madhu/OneDrive/Documents/titanic.csv
+2025-03-19 23:21:32,688 - INFO - Started processing C:/Users/madhu/OneDrive/Documents/titanic1.csv
+2025-03-19 23:21:32,768 - ERROR - Error processing C:/Users/madhu/OneDrive/Documents/titanic.csv: 'Sibsp'
+2025-03-19 23:21:32,785 - ERROR - Error processing C:/Users/madhu/OneDrive/Documents/titanic1.csv: 'Sibsp'
+2025-03-19 23:23:31,804 - INFO - Started processing C:/Users/madhu/OneDrive/Documents/titanic.csv
+2025-03-19 23:23:31,810 - INFO - Started processing C:/Users/madhu/OneDrive/Documents/titanic1.csv
+2025-03-19 23:23:31,885 - INFO - Finished processing C:/Users/madhu/OneDrive/Documents/titanic.csv) - Mean: 0.5230078563411896
+2025-03-19 23:23:31,925 - INFO - Finished processing C:/Users/madhu/OneDrive/Documents/titanic1.csv) - Mean: 2.294881588999236
