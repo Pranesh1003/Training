@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/dhaks/Documents/Training/Level%2019/mlruns/993254441919704357/42836d9f4f55448cb628cbeac72a3fce/artifacts
+end_time: 1744713276896
+entry_point_name: ''
+experiment_id: '993254441919704357'
+lifecycle_stage: active
+run_id: 42836d9f4f55448cb628cbeac72a3fce
+run_name: fun-dolphin-582
+run_uuid: 42836d9f4f55448cb628cbeac72a3fce
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744713256444
+status: 3
+tags: []
+user_id: dhaks

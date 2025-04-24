@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1744799657349
+current_stage: None
+description: null
+last_updated_timestamp: 1744799657349
+name: zenml_linear_regression
+run_id: 1177f48c043f41e8916cf12b1ff723e0
+run_link: null
+source: file:///C:/Users/dhaks/Documents/Training/Level 18/Bonus Task/mlruns/0/1177f48c043f41e8916cf12b1ff723e0/artifacts/linear_regression_model
+status: READY
+status_message: null
+storage_location: file:///C:/Users/dhaks/Documents/Training/Level 18/Bonus Task/mlruns/0/1177f48c043f41e8916cf12b1ff723e0/artifacts/linear_regression_model
+user_id: null
+version: 1

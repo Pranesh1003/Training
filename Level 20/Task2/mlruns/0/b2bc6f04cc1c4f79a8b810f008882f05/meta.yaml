@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Training/Phase%201/Levels%2016-20/Level%2020/Task2/mlruns/0/b2bc6f04cc1c4f79a8b810f008882f05/artifacts
+end_time: 1745389550017
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b2bc6f04cc1c4f79a8b810f008882f05
+run_name: defiant-wasp-864
+run_uuid: b2bc6f04cc1c4f79a8b810f008882f05
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745389488348
+status: 3
+tags: []
+user_id: madhu

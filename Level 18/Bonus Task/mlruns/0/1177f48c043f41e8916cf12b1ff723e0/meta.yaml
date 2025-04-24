@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/dhaks/Documents/Training/Level 18/Bonus Task/mlruns/0/1177f48c043f41e8916cf12b1ff723e0/artifacts
+end_time: 1744799657381
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1177f48c043f41e8916cf12b1ff723e0
+run_name: wise-ram-23
+run_uuid: 1177f48c043f41e8916cf12b1ff723e0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1744799650778
+status: 3
+tags: []
+user_id: dhaks
