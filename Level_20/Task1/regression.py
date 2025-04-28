@@ -6,13 +6,11 @@ from zenml import step, pipeline
 from zenml.client import Client
 import logging
 
-# Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 @step
 def ingest_data() -> pd.DataFrame:
-    """Ingest diabetes dataset."""
     diabetes = load_diabetes()
     df = pd.DataFrame(diabetes.data, columns=diabetes.feature_names)
     df['target'] = diabetes.target
@@ -21,7 +19,6 @@ def ingest_data() -> pd.DataFrame:
 
 @step
 def clean_data(df: pd.DataFrame) -> pd.DataFrame:
-    """Clean dataset by removing null values."""
     initial_rows = len(df)
     df = df.dropna()
     logger.info(f"Removed {initial_rows - len(df)} rows with null values.")
@@ -29,7 +26,6 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
 
 @step
 def train_model(df: pd.DataFrame) -> LinearRegression:
-    """Train a linear regression model."""
     X = df.drop('target', axis=1)
     y = df['target']
     model = LinearRegression()
@@ -39,7 +35,6 @@ def train_model(df: pd.DataFrame) -> LinearRegression:
 
 @step
 def evaluate_model(model: LinearRegression, df: pd.DataFrame) -> dict:
-    """Evaluate model using MSE and R2 metrics."""
     X = df.drop('target', axis=1)
     y = df['target']
     y_pred = model.predict(X)
@@ -51,15 +46,12 @@ def evaluate_model(model: LinearRegression, df: pd.DataFrame) -> dict:
 
 @pipeline
 def regression_pipeline():
-    """Define the regression pipeline."""
     data = ingest_data()
     cleaned_data = clean_data(data)
     model = train_model(cleaned_data)
     metrics = evaluate_model(model, cleaned_data)
 
 if __name__ == "__main__":
-    # Initialize ZenML repository (run `zenml init` in terminal first)
     Client()
     
-    # Run the pipeline
     regression_pipeline()

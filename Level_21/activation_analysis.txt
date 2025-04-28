@@ -1,0 +1,8 @@
+
+**Activation Function Performance Analysis**
+
+- **ReLU**: Converges fastest, achieving the lowest loss by epoch 10. Its non-saturating gradient helps avoid vanishing gradient issues, making it effective for this shallow network.
+- **Sigmoid**: Slowest convergence, higher loss. Its saturating gradients can hinder learning, especially in deeper layers, though this network is shallow.
+- **Tanh**: Moderate performance, better than sigmoid but worse than ReLU. Its zero-centered output helps, but it still faces gradient saturation compared to ReLU.
+
+**Conclusion**: ReLU performs best for this Iris classification task due to its faster convergence and robustness against vanishing gradients.

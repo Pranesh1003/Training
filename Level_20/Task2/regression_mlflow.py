@@ -8,13 +8,11 @@ import logging
 import mlflow
 import mlflow.sklearn
 
-# Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 @step
 def ingest_data() -> pd.DataFrame:
-    """Ingest diabetes dataset."""
     diabetes = load_diabetes()
     df = pd.DataFrame(diabetes.data, columns=diabetes.feature_names)
     df['target'] = diabetes.target
@@ -31,8 +29,6 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
 
 @step
 def train_model(df: pd.DataFrame) -> LinearRegression:
-    """Train a linear regression model with MLflow tracking."""
-    # Enable MLflow autologging for sklearn
     mlflow.sklearn.autolog()
     
     X = df.drop('target', axis=1)
@@ -44,7 +40,6 @@ def train_model(df: pd.DataFrame) -> LinearRegression:
 
 @step
 def evaluate_model(model: LinearRegression, df: pd.DataFrame) -> dict:
-    """Evaluate model using MSE and R2 metrics, log to MLflow."""
     X = df.drop('target', axis=1)
     y = df['target']
     y_pred = model.predict(X)
@@ -61,15 +56,12 @@ def evaluate_model(model: LinearRegression, df: pd.DataFrame) -> dict:
 
 @pipeline
 def regression_pipeline():
-    """Define the regression pipeline with MLflow tracking."""
     data = ingest_data()
     cleaned_data = clean_data(data)
     model = train_model(cleaned_data)
     metrics = evaluate_model(model, cleaned_data)
 
 if __name__ == "__main__":
-    # Initialize ZenML repository (run `zenml init` in terminal first)
     Client()
     
-    # Run the pipeline
     regression_pipeline()
